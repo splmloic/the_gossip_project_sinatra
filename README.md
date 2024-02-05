@@ -11,3 +11,4 @@ j'ai pu aller jusqu'a l'exo 2.7, j'ai abandonné au 2.8
 
 
 pour le 2.8 mon idée etait de crée une base de donnée par gossip qui stockerai les commentaires, puis d'appeler 
+les commentaires de index a chaque fois que show s'afficherai
