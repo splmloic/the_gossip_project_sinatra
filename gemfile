@@ -4,5 +4,4 @@ gem 'sinatra'
 gem 'rack'
 gem 'rackup'
 gem 'rerun'
-
 gem "csv", "~> 3.2"
