@@ -6,10 +6,12 @@
     <h1>Mon super site de gossip, depuis le dossier views !</h1>
     <p>La liste des potins arrive bientot, en attendant clique pour en crée 1</p>
     <a href="/gossips/new">Crée un potin</a>
-    <% gossips.each do |gossip| %>
+    <% gossips.each_with_index do |gossip,id| %>
       <p>
-        <%= gossip.author %><br/>
+      <a href="/gossips/<%= id%>" >Voir le potin <%= id%></a> <br/>
+        <%= gossip.author %> <br/>
         <%= gossip.content %>
+
       </p>
     <% end %>
   </body>

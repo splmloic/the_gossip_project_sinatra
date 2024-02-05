@@ -1,5 +1,5 @@
 class Gossip
-    attr_reader :author, :content
+    attr_accessor :id, :author, :content
     def initialize(author, content)
         @content = content
         @author = author
@@ -15,14 +15,16 @@ class Gossip
 
     def self.all
         all_gossips = []
-        CSV.read("./db/gossip.csv").each do |csv_line, id|
+        CSV.read("./db/gossip.csv").each do |csv_line|
           all_gossips << Gossip.new(csv_line[0], csv_line[1])
         end
         return all_gossips
       end
 
-    def self.find
-
+    def self.find(id)
+        all_gossips = self.all
+        gossip = all_gossips[id.to_i]
+        return gossip
     end
 
 end
